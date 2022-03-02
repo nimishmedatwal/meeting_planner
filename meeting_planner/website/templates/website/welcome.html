@@ -9,33 +9,43 @@
     <title>Welcome</title>
 </head>
 <body>
-    <svg viewBox="0 0 1250 200">
-        <symbol id="s-text">
-            <text text-anchor="middle" x="50%" y="80%">Meeting Planner</text>
-        </symbol>
+    <section id="Heading">
+        <svg viewBox="0 0 1250 200">
+            <symbol id="s-text">
+                <text text-anchor="middle" x="50%" y="80%">Meeting Planner</text>
+            </symbol>
 
-        <g class="g-ants">
-            <use xlink:href="#s-text" class="text-copy"></use>
-            <use xlink:href="#s-text" class="text-copy"></use>
-            <use xlink:href="#s-text" class="text-copy"></use>
-            <use xlink:href="#s-text" class="text-copy"></use>
-            <use xlink:href="#s-text" class="text-copy"></use>
-        </g>
-    </svg>
-    <div class="a">
-        <h2>Meetings List</h2>
-    </div>
+            <g class="g-ants">
+                <use xlink:href="#s-text" class="text-copy"></use>
+                <use xlink:href="#s-text" class="text-copy"></use>
+                <use xlink:href="#s-text" class="text-copy"></use>
+                <use xlink:href="#s-text" class="text-copy"></use>
+                <use xlink:href="#s-text" class="text-copy"></use>
+            </g>
+        </svg>
+    </section>
+    <section id="list">
+        <div class="meetingheading">
+            <h2>Meetings List</h2>
+        </div>
+        <div class="meetinglist">
+            <ul>
+                {% for meeting in meeting %}
+                    <div >
+                        <li class="pp">
+                            <div class="ll">
+                                <a href="{% url 'detail' meeting.id %}" class="meetinglist1" >{{meeting.title}}</a>
+                            </div>
+                        </li>
+                    </div>
 
-    <ul>
-        {% for meeting in meeting %}
-            <li>
-                <a href="{% url 'detail' meeting.id %}">{{meeting.title}}</a>
-            </li>
-        {% endfor %}
-    </ul>
+                {% endfor %}
+            </ul>
+        </div>
+    
     <a href="{% url 'rooms' %}"> Rooms List </a>
     <br>
     <a href="{% url 'new' %}">Add a New Meeting</a>
-
+    </section>
 </body>
 </html>
