@@ -5,13 +5,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static '../../../../static/website/style.css' %}">
+    <link rel="stylesheet" href="{% static 'website/style.css' %}">
     <title>Welcome</title>
 </head>
 <body>
+    <svg viewBox="0 0 1250 200">
+        <symbol id="s-text">
+            <text text-anchor="middle" x="50%" y="80%">Meeting Planner</text>
+        </symbol>
 
-    <h1>Welcome to the meeting planner</h1>
-    <h2>Meetings</h2>
+        <g class="g-ants">
+            <use xlink:href="#s-text" class="text-copy"></use>
+            <use xlink:href="#s-text" class="text-copy"></use>
+            <use xlink:href="#s-text" class="text-copy"></use>
+            <use xlink:href="#s-text" class="text-copy"></use>
+            <use xlink:href="#s-text" class="text-copy"></use>
+        </g>
+    </svg>
+    <div class="a">
+        <h2>Meetings List</h2>
+    </div>
+
     <ul>
         {% for meeting in meeting %}
             <li>
