@@ -2,16 +2,6 @@
 @import url('https://fonts.cdnfonts.com/css/wynford');
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
-html, body{
-  height: 100vh;
-  font-weight:900;
-}
-
-/* body{
-  background-size: cover;
-    font-family: Arial;
-} */
-
 svg {
     display: block;
     font: 9.5em 'Montserrat';
@@ -116,11 +106,14 @@ body{
 }
 .pp{
     list-style-type: none;
-
+    display: inline-block;
+}
+.meetinglist{
+    display: inline-block;
 }
 .meetinglist1{
-    
-    margin: 1rem 2rem 0rem 2rem;
+
+    margin: 3rem 2rem 0rem 2rem;
     padding: 1rem 1rem 1rem 1rem ;
     border-radius: 5em; 
     background-color: #86868683;
@@ -133,9 +126,12 @@ body{
     background-color: #111111c2;
     color: #ffffff;
     display: inline-block;
+    border: #000000;
+    border-style: dashed;
 
 
 }
+
 #list{
     width: 100vw; 
 }

@@ -23,29 +23,28 @@
                 <use xlink:href="#s-text" class="text-copy"></use>
             </g>
         </svg>
+        <div class="buttons">
+            <a href="{% url 'rooms' %}" class="button"> Rooms List </a>
+            <br>
+            <a href="{% url 'new' %}" class="button">Add a New Meeting</a>
+        </div>
     </section>
     <section id="list">
         <div class="meetingheading">
             <h2>Meetings List</h2>
         </div>
-        <div class="meetinglist">
+        <section class="meetinglist">
             <ul>
                 {% for meeting in meeting %}
-                    <div >
                         <li class="pp">
-                            <div class="ll">
+                            
                                 <a href="{% url 'detail' meeting.id %}" class="meetinglist1" >{{meeting.title}}</a>
-                            </div>
+
                         </li>
-                    </div>
 
                 {% endfor %}
             </ul>
-        </div>
-    
-    <a href="{% url 'rooms' %}"> Rooms List </a>
-    <br>
-    <a href="{% url 'new' %}">Add a New Meeting</a>
+        </section>
     </section>
 </body>
 </html>
